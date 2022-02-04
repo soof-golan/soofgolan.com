@@ -36,11 +36,7 @@ ogImage:
 
 </div>
 
-```python
-[[1, 1, 1],
-[1, 0, 1],
-[1, 1, 1]]
-```
+<script src="https://gist.github.com/soof-golan/bc6b4392773a2b5481d8da69237042b6.js?file=game_of_life.py"></script>
 
 <div dir="rtl">
 
@@ -85,10 +81,7 @@ ogImage:
 
 </div>
 
-```python
-def threshold(image: np.ndarray, val) -> np.ndarray:
-    return image - val >= 0
-```
+<script src="https://gist.github.com/soof-golan/bc6b4392773a2b5481d8da69237042b6.js?file=threshold.py"></script>
 
 <div dir="rtl">
 
@@ -96,20 +89,7 @@ def threshold(image: np.ndarray, val) -> np.ndarray:
 
 </div>
 
-```python
-def gaussian_kernel(kernel_size=21, nsig=3):
-    x = np.linspace(-nsig, nsig, kernel_size+1)
-    kern1d = np.diff(scipy.stats.norm.cdf(x))
-    kern2d = np.outer(kern1d, kern1d)
-    return kern2d/kern2d.sum()
-
-def gaussian_blur(image: np.ndarray, kernel_size) -> np.ndarray:
-    kernel = gaussian_kernel(kernel_size)
-    return scipy.signal.convolve2d(image, kernel, 'same')
-
-def sharpen(image: np.ndarray, kernel_size) -> np.ndarray:
-    return image - gaussian_blur(image) >= 0
-```
+<script src="https://gist.github.com/soof-golan/bc6b4392773a2b5481d8da69237042b6.js?file=sharpen.py"></script>
 
 <div dir="rtl">
 
