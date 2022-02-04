@@ -11,17 +11,18 @@ type Props = {
   allPosts: Post[]
 }
 
-const Index = ({ allPosts }: Props) => {
+const Index = ({allPosts}: Props) => {
   const heroPost = allPosts[0]
   const morePosts = allPosts.slice(1)
+  const metaProps = {imageUrl: heroPost.coverImage, postExcept: heroPost.excerpt}
   return (
     <>
-      <Layout>
+      <Layout metaProps={metaProps}>
         <Head>
           <title>Soof Golan's Blog</title>
         </Head>
         <Container>
-          <Intro />
+          <Intro/>
           {heroPost && (
             <HeroPost
               title={heroPost.title}
@@ -32,7 +33,7 @@ const Index = ({ allPosts }: Props) => {
               excerpt={heroPost.excerpt}
             />
           )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          {morePosts.length > 0 && <MoreStories posts={morePosts}/>}
         </Container>
       </Layout>
     </>
@@ -52,6 +53,6 @@ export const getStaticProps = async () => {
   ])
 
   return {
-    props: { allPosts },
+    props: {allPosts},
   }
 }
