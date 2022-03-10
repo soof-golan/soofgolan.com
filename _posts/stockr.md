@@ -55,7 +55,7 @@ As much as I try to resist, I do a lot of POP (pun oriented programming) 😅
 ### Architecture
 
 stockr is served statically with cloudflare pages. The client connects to alpaca
-using only one WebSocket, exchanges the API Key, and lets the users to start typing Tickers
+using only one WebSocket, exchanges the API Key, and lets the users start typing Tickers
 
 ![stock architecture](/assets/blog/stockr/arch.png)
 
@@ -64,7 +64,7 @@ using only one WebSocket, exchanges the API Key, and lets the users to start typ
 I chose Vite + React to improve my frontend development skills and because 
 I like integrating anything resembling the ⚡ emoji. I have little 
 practical experience with frontend frameworks, and I must note the on-boarding experience
-of React I really awesome. On top React I used Material UI to achieve a look 
+of React is really awesome. On top of React I used Material UI to achieve a look 
 that might mislead you to think I know how to design stuff.
 
 While developing, the HMR (Hot Module Reload) feature of Vite made it super easy to 
@@ -83,7 +83,10 @@ and to get familiar with a technology that I think is pretty awesome in its core
 `<Complaint>`
 
 The most painful thing with Alpaca's WebSocket API, is the authentication mechanism.
-Their authentication protocol is implemented over the websocket channel itself. 
+The client need to very stateful about the authentication handshake, not exactly what
+I thought I'd be meddling with when doing this application.
+
+The authentication protocol is implemented over the websocket channel itself. 
 After the `wss` connection is established successfully, you must wait for a message
 that states the obvious `{"T":"success","msg":"connected"}`. 
 
@@ -91,11 +94,12 @@ Only after that, you may proceed with authentication, send your payload
 `{"action":"auth","key": "API_KEY_ID","secret":"API_KEY_SECRET"}` and wait for the
 response. Once authenticated, you can subscribe to specific and get callbacks for every update.
 
-I believe a saner way to authenticate would be something like:
+I believe a saner way to authenticate would be something like passing the authentication using
+[URL parameters](https://stackoverflow.com/questions/499591/are-https-urls-encrypted):
 
 ``const ws = new WebSocket(`wss://${baseUrl}?keyId=${keyId}&apiKey=${apiKey}`)``.
 
-This would allow the server to drop the WebSocket connection altogether before 
+To handle errors, the server would drop the connection altogether before 
 any messages went on the `wss` channel. This also promotes a more stateless 
 approach to the whole auth process, and frees client code to be all about the market data API.
 
@@ -104,7 +108,7 @@ approach to the whole auth process, and frees client code to be all about the ma
 ### My Backend
 
 There isn't one, unless you count the static serving of the client. 
-By the way, Cloudflare Pages is a pretty cool product. maybe I'll write about it at some point.  
+By the way, I really liked [Cloudflare Pages](https://pages.cloudflare.com/). maybe I'll write about that product at some point.  
 
 ## Conclusion
 
