@@ -21,29 +21,31 @@ Here is the [source code](https://github.com/soof-golan/stockr).
 ![stockr demo](/assets/blog/stockr/demo.gif)
 
 
-## Introduction - It's very expensive (in time) to be cheap (in money)
+## Introduction - It costs a lot of time to save a bit of money
 
 I'm invested in the stock market. Before I purchase stocks (or anything else), 
 I want to know what is its price right now. Most of the stock price data you can
-find on the internet is delayed by 15 minutes, that is not acceptable for my
+find on the internet are delayed by 15 minutes, that is not acceptable for my
 posh trading algorithms (psst, I don't have any).
 
 My Options were (sorted by price, descending):
 
 1 - using the market price snapshot data that my broker offers - $0.01
 
-2 - Building a real-time web application from scratch for a live-stream of data I have no actual use of - costs $0.00 - that's ∞ times better! 😉
+2 - Building a real-time web application from scratch for a live-stream of data I have no actual use of - costs $0.00 - **that's ∞ times better!** 😉
 
 Faced with these options, I have decided to go with the fun, and oh so inefficient, route.
 
 ## Proof of Concept
 
-I've heard that Alpaca (the company, not the animal) provides free access to 
+I've heard that [Alpaca][alpaca] (the company, not the animal) provides free access to 
 real-time market data. I signed up to their service, and after all the legal stuff
 I got my shiny API Key.
 
 A few lines later in the console of my browser, price quotes started streaming
 down the `console.log` river.
+
+![poc animation placeholder](/assets/blog/stockr/poc.gif)
 
 ## Creating stockr
 
@@ -55,7 +57,7 @@ As much as I try to resist, I do a lot of POP (pun oriented programming) 😅
 ### Architecture
 
 stockr is served statically with cloudflare pages. The client connects to alpaca
-using only one WebSocket, exchanges the API Key, and lets the users start typing Tickers
+using only one [WebSocket](https://en.wikipedia.org/wiki/WebSocket), exchanges the API Key, and lets the users start typing Tickers
 
 ![stock architecture](/assets/blog/stockr/arch.png)
 
@@ -70,6 +72,8 @@ that might mislead you to think I know how to design stuff.
 While developing, the HMR (Hot Module Reload) feature of Vite made it super easy to 
 update code on the fly. The only downside of HMR is leaking WebSocket into the void
 of the JS heap whenever I touched the `SocketController` module.
+
+![scaffolding stockr](/assets/blog/stockr/scaffold.gif)
 
 ### Financial Backend
 
@@ -108,7 +112,7 @@ approach to the whole auth process, and frees client code to be all about the ma
 ### My Backend
 
 There isn't one, unless you count the static serving of the client. 
-By the way, I really liked [Cloudflare Pages](https://pages.cloudflare.com/). maybe I'll write about that product at some point.  
+By the way, I really liked [Cloudflare Pages][cloudflare]. maybe I'll write about that product at some point.  
 
 ## Conclusion
 
@@ -119,3 +123,5 @@ and paste it into the [stockr][stockr].
 Happy trading!
 
 [stockr]: https://stockr.soofgolan.com/ "stockr"
+[alpaca]: https://alpaca.markets/ "Alpaca Trading"
+[cloudflare]: https://pages.cloudflare.com/ "Cloudflare Pages"
