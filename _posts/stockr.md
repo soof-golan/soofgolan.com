@@ -5,7 +5,7 @@ coverImage: '/assets/blog/stockr/cover.avif'
 date: '2022-03-09T19:11:25.315Z' 
 author:
     name: Soof Golan 
-    picture: '/assets/blog/authors/sg.jfif' 
+    picture: '/assets/blog/authors/sg.avif' 
 ogImage:
     url: '/assets/blog/stockr/cover.avif'
 ---

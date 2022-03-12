@@ -5,7 +5,7 @@ coverImage: '/assets/blog/lootbox/cover.avif'
 date: '2022-01-14T06:35:07.322Z'
 author:
     name: Soof Golan
-    picture: '/assets/blog/authors/sg.jfif'
+    picture: '/assets/blog/authors/sg.avif'
 ogImage:
     url: '/assets/blog/lootbox/cover.avif'
 ---

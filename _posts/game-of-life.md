@@ -5,7 +5,7 @@ coverImage: '/assets/blog/game-of-life/cover.png'
 date: '2022-02-03T21:29:25.315Z' 
 author:
     name: Soof Golan 
-    picture: '/assets/blog/authors/sg.jfif' 
+    picture: '/assets/blog/authors/sg.avif' 
 ogImage:
     url: '/assets/blog/game-of-life/cover.png'
 ---

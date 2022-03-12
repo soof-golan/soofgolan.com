@@ -5,7 +5,7 @@ coverImage: '/assets/blog/hello-world/cover.avif'
 date: '2022-01-14T05:35:07.322Z'
 author:
   name: Soof Golan
-  picture: '/assets/blog/authors/sg.jfif'
+  picture: '/assets/blog/authors/sg.avif'
 ogImage:
   url: '/assets/blog/hello-world/cover-wide.avif'
 ---
