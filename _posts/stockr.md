@@ -1,5 +1,5 @@
 ---
-title: 'realtime trading monitor - powered by websockets' 
+title: 'stockr Building a realtime trading monitor - powered by websockets' 
 excerpt: 'stockr - a webapp that monitors live trades and quotes' 
 coverImage: '/assets/blog/stockr/cover.avif' 
 date: '2022-03-09T19:11:25.315Z' 
