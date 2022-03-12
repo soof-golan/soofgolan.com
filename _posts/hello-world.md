@@ -1,13 +1,13 @@
 ---
 title: 'Hello, World 👋🌍'
 excerpt: 'Welcome to my new blog'
-coverImage: '/assets/blog/hello-world/cover.jpg'
+coverImage: '/assets/blog/hello-world/cover.avif'
 date: '2022-01-14T05:35:07.322Z'
 author:
   name: Soof Golan
   picture: '/assets/blog/authors/sg.jfif'
 ogImage:
-  url: '/assets/blog/hello-world/cover-wide.jpg'
+  url: '/assets/blog/hello-world/cover-wide.avif'
 ---
 
 Hi There! I'm Soof.

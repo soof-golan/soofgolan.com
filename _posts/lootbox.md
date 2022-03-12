@@ -1,13 +1,13 @@
 ---
 title: '🍫🎮 LootBox - המדריך הלא רשמי להרמת מיצב במידברן'
 excerpt: 'Video-game powered vending machine in the middle of the desert'
-coverImage: '/assets/blog/lootbox/cover.jpg'
+coverImage: '/assets/blog/lootbox/cover.avif'
 date: '2022-01-14T06:35:07.322Z'
 author:
     name: Soof Golan
     picture: '/assets/blog/authors/sg.jfif'
 ogImage:
-    url: '/assets/blog/lootbox/cover.jpg'
+    url: '/assets/blog/lootbox/cover.avif'
 ---
 
 <div dir="rtl">
