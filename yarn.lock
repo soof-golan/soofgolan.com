@@ -270,6 +270,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-document-meta@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "@types/react-document-meta@npm:3.0.2"
+  dependencies:
+    "@types/react": "*"
+  checksum: 341e0240ae190e2ead3b792b2ce168a7d201a08d14403dab3ec3a12be6f09dff6d95242b611e09f2ed61512a911ecefcecfb311407884608f7836f3bfbb14ba5
+  languageName: node
+  linkType: hard
+
 "@types/react-dom@npm:^17.0.5":
   version: 17.0.11
   resolution: "@types/react-dom@npm:17.0.11"
@@ -1440,7 +1449,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"loose-envify@npm:^1.1.0":
+"loose-envify@npm:^1.1.0, loose-envify@npm:^1.4.0":
   version: 1.4.0
   resolution: "loose-envify@npm:1.4.0"
   dependencies:
@@ -2034,6 +2043,17 @@ next@latest:
   languageName: node
   linkType: hard
 
+"prop-types@npm:^15.6.1":
+  version: 15.8.1
+  resolution: "prop-types@npm:15.8.1"
+  dependencies:
+    loose-envify: ^1.4.0
+    object-assign: ^4.1.1
+    react-is: ^16.13.1
+  checksum: c056d3f1c057cb7ff8344c645450e14f088a915d078dcda795041765047fa080d38e5d626560ccaac94a4e16e3aa15f3557c1a9a8d1174530955e992c675e459
+  languageName: node
+  linkType: hard
+
 "property-information@npm:^5.0.0":
   version: 5.6.0
   resolution: "property-information@npm:5.6.0"
@@ -2057,6 +2077,19 @@ next@latest:
   languageName: node
   linkType: hard
 
+"react-document-meta@npm:^3.0.0-beta.2":
+  version: 3.0.0-beta.5
+  resolution: "react-document-meta@npm:3.0.0-beta.5"
+  dependencies:
+    prop-types: ^15.6.1
+    react-side-effect: ^1.1.5
+  peerDependencies:
+    react: ">=0.14.0"
+    react-dom: ">=0.14.0"
+  checksum: 6b1857f5b5de4889372b661a1c18375494b90a746fbd8ee11974da21fa58b3b9ac8340cc6880eb74ea78fd679a513177040daaa7b955c038b38333a7677c207f
+  languageName: node
+  linkType: hard
+
 "react-dom@npm:^17.0.2":
   version: 17.0.2
   resolution: "react-dom@npm:17.0.2"
@@ -2070,10 +2103,28 @@ next@latest:
   languageName: node
   linkType: hard
 
+"react-is@npm:^16.13.1":
+  version: 16.13.1
+  resolution: "react-is@npm:16.13.1"
+  checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f
+  languageName: node
+  linkType: hard
+
 "react-is@npm:^17.0.1":
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
   checksum: 9d6d111d8990dc98bc5402c1266a808b0459b5d54830bbea24c12d908b536df7883f268a7868cfaedde3dd9d4e0d574db456f84d2e6df9c4526f99bb4b5344d8
+  languageName: node
+  linkType: hard
+
+"react-side-effect@npm:^1.1.5":
+  version: 1.2.0
+  resolution: "react-side-effect@npm:1.2.0"
+  dependencies:
+    shallowequal: ^1.0.1
+  peerDependencies:
+    react: ^0.13.0 || ^0.14.0 || ^15.0.0 || ^16.0.0
+  checksum: f84c99bc13999f632c7d341b2fe5e1a6cfbf1708ce10e80624535a5296a37359e8cb94c3cde5a3506dbe151fc712896132fae4f856e079fded638b0cb5a4a00e
   languageName: node
   linkType: hard
 
@@ -2220,6 +2271,7 @@ next@latest:
     "@types/jest": ^26.0.23
     "@types/node": ^15.6.0
     "@types/react": ^17.0.6
+    "@types/react-document-meta": ^3.0.2
     "@types/react-dom": ^17.0.5
     autoprefixer: 10.4.0
     classnames: ^2.3.1
@@ -2228,6 +2280,7 @@ next@latest:
     next: latest
     postcss: 8.4.5
     react: ^17.0.2
+    react-document-meta: ^3.0.0-beta.2
     react-dom: ^17.0.2
     remark: ^13.0.0
     remark-html: ^13.0.2
@@ -2294,6 +2347,13 @@ next@latest:
   version: 2.0.0
   resolution: "set-blocking@npm:2.0.0"
   checksum: 6e65a05f7cf7ebdf8b7c75b101e18c0b7e3dff4940d480efed8aad3a36a4005140b660fa1d804cb8bce911cac290441dc728084a30504d3516ac2ff7ad607b02
+  languageName: node
+  linkType: hard
+
+"shallowequal@npm:^1.0.1":
+  version: 1.1.0
+  resolution: "shallowequal@npm:1.1.0"
+  checksum: f4c1de0837f106d2dbbfd5d0720a5d059d1c66b42b580965c8f06bb1db684be8783538b684092648c981294bf817869f743a066538771dbecb293df78f765e00
   languageName: node
   linkType: hard
 
